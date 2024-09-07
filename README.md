@@ -1,6 +1,6 @@
 # NAS Status Monitor Browser Plugin
 
-![](https://raw.githubusercontent.com/ansonhex/NAS-Status/assets/nas-status.gif)
+![](https://raw.githubusercontent.com/ansonhex/NAS-Status/main/assets/nas-status.gif)
 
 ## Tech Stacks
 
