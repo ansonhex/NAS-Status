@@ -8,8 +8,8 @@ var webpack = require('webpack'),
 var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 var ReactRefreshTypeScript = require('react-refresh-typescript');
-
-
+const dotenv = require('dotenv');
+const Dotenv = require('dotenv-webpack');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
@@ -137,6 +137,7 @@ var options = {
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
     new CleanWebpackPlugin({ verbose: false }),
+    new Dotenv(),
     new webpack.ProgressPlugin(),
     // expose and write the allowed env vars on the compiled bundle
     new webpack.EnvironmentPlugin(['NODE_ENV']),
@@ -210,6 +211,7 @@ var options = {
       chunks: ['panel'],
       cache: false,
     }),
+    new Dotenv(),
   ].filter(Boolean),
   infrastructureLogging: {
     level: 'info',

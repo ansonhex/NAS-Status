@@ -38,9 +38,9 @@ const Popup = () => {
       setLoading(true);
       try {
         const [cpuResponse, ramResponse, dockerResponse] = await Promise.all([
-          fetch('http://192.168.1.243:3000/status/cpu'),
-          fetch('http://192.168.1.243:3000/status/ram'),
-          fetch('http://192.168.1.243:3000/status/docker'),
+          fetch(`${process.env.REACT_APP_API_URL}/status/cpu`),
+          fetch(`${process.env.REACT_APP_API_URL}/status/ram`),
+          fetch(`${process.env.REACT_APP_API_URL}/status/docker`),
         ]);
 
         const [cpu, ram, docker] = await Promise.all([
