@@ -7,4 +7,4 @@
 - Frontend: `React`
 - Backend: `Bun` and `Hono`
 - Styles: `Chakra UI`
-- Build: `Vite`
+- Build: `Webpack`
