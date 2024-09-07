@@ -67,10 +67,10 @@ const Popup = () => {
       </Heading>
 
       <Tabs isFitted variant="soft-rounded" colorScheme="purple">
-        <TabList mb="1em">
-          <Tab fontSize={"sm"} >CPU</Tab>
-          <Tab fontSize={"sm"} >RAM</Tab>
-          <Tab fontSize={"sm"} >Docker</Tab>
+        <TabList>
+          <Tab fontSize={"xs"} >CPU</Tab>
+          <Tab fontSize={"xs"} >RAM</Tab>
+          <Tab fontSize={"xs"} >Docker</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -91,7 +91,7 @@ const Popup = () => {
                   <Text fontWeight="bold" textAlign="center">
                     {data.cpu.model}
                   </Text>
-                  <Text>Cores: {data.cpu.cores}</Text>
+                  {/* <Text>Cores: {data.cpu.cores}</Text> */}
                   <Text>Temperature: {data.cpu.temperature || "N/A"}°C</Text>
                 </>
               ) : loading ? (
@@ -116,9 +116,9 @@ const Popup = () => {
                       {data.ram.usagePercentage.toFixed(2)}%
                     </CircularProgressLabel>
                   </CircularProgress>
-                  <Text>Total Memory: {data.ram.totalMemory}</Text>
-                  <Text>Free Memory: {data.ram.freeMemory}</Text>
-                  <Text>Used Memory: {data.ram.usedMemory}</Text>
+                  <Text>Total: {data.ram.totalMemory}</Text>
+                  <Text>Free: {data.ram.freeMemory}</Text>
+                  <Text>Used: {data.ram.usedMemory}</Text>
                 </>
               ) : loading ? (
                 <Spinner />
@@ -132,8 +132,8 @@ const Popup = () => {
               {data.docker.length > 0 ? (
                 data.docker.map((container) => (
                   <Box key={container.id} p={1} borderWidth={1} borderRadius="md" width="100%">
-                    <Text fontWeight="bold">Name: {container.name}</Text>
-                    <Text>Status: {container.status}</Text>
+                    <Text fontWeight="bold">{container.name}</Text>
+                    <Text fontSize={"xs"}>{container.status}</Text>
                   </Box>
                 ))
               ) : loading ? (

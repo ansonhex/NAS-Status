@@ -9,6 +9,8 @@ var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 var ReactRefreshTypeScript = require('react-refresh-typescript');
 
+
+
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 var alias = {};
