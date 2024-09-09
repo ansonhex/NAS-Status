@@ -104,7 +104,7 @@ const Popup = () => {
                   <Text fontWeight="bold" textAlign="center">
                     {data.cpu.model}
                   </Text>
-                  <Text color={'grey'}>
+                  <Text color={'grey'} fontSize={'11px'}>
                     Temperature: {data.cpu.temperature || 'N/A'}°C
                   </Text>
                 </>
@@ -116,7 +116,7 @@ const Popup = () => {
             </VStack>
           </TabPanel>
           <TabPanel>
-            <VStack spacing={2} align="center" minH="100px">
+            <VStack spacing={1} align="center" minH="100px">
               {data.ram ? (
                 <>
                   <CircularProgress
@@ -130,9 +130,10 @@ const Popup = () => {
                       {data.ram.usagePercentage.toFixed(2)}%
                     </CircularProgressLabel>
                   </CircularProgress>
-                  <Text color={'grey'}>Total: {data.ram.totalMemory}</Text>
-                  <Text color={'grey'}>Free: {data.ram.freeMemory}</Text>
-                  <Text color={'grey'}>Used: {data.ram.usedMemory}</Text>
+                  <Text color={'grey'} fontSize={'11px'}>Total: {data.ram.totalMemory}</Text>
+                  <Text color={'grey'} fontSize={'11px'}>Used: {data.ram.usedMemory}</Text>
+                  <Text color={'grey'} fontSize={'11px'}>Cached: {data.ram.cachedMemory}</Text>
+                  <Text color={'grey'} fontSize={'11px'}>Free: {data.ram.freeMemory}</Text>
                 </>
               ) : loading ? (
                 <Spinner />

@@ -1,11 +1,11 @@
 {
   "name": "NAS Status Monitor",
-  "version": "5.0.4",
+  "version": "0.0.1",
   "description": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+    "url": "https://github.com/ansonhex/NAS-Status"
   },
   "scripts": {
     "build": "node utils/build.js",
