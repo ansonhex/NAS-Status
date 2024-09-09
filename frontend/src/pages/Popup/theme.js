@@ -2,8 +2,8 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: "'Fira Code', monospace",
-    body: "'Fira Code', monospace",
+    heading: "'JetBrains Mono', monospace",
+    body: "'JetBrains Mono', monospace",
   },
 });
 
