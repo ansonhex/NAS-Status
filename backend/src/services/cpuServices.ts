@@ -25,7 +25,7 @@ async function getCPUModel(): Promise<string> {
 async function getCPUUsagePercentage(): Promise<number> {
   try {
     const { stdout } = await execAsync(
-      "mpstat 1 1 | awk '/all/ {print 100 - $NF}'"
+      "mpstat | awk '/all/ {print 100 - $NF}'"
     );
     return parseFloat(stdout.trim());
   } catch (error) {
